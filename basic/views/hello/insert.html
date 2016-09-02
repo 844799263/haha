@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<?php
+$session = \YII::$app->session;
+?>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<center>
+<h2>欢迎<font color="red"><?php echo $session->get('user');?></font>登录</h2>
+    <a href="?r=hello/insert">图片添加</a>||<a href="?r=hello/list">图片展示</a>
+    <form action="?r=hello/up" method="post" enctype="multipart/form-data">
+        <input name="_csrf" type="hidden" id="_csrf" value="<?= Yii::$app->request->csrfToken ?>">
+    <table>
+
+        <tr>
+            <td>添加图片:</td>
+            <td><input type="file" name="myfile"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="提交"></td>
+        </tr>
+
+    </table>
+    </form>
+</center>
+</body>
+</html>

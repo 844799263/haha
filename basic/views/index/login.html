@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form action="?r=index/add" method="post" enctype="multipart/form-data">
+    <input name="_csrf" type="hidden" id="_csrf" value="<?= Yii::$app->request->csrfToken ?>">
+    <table>
+        <tr>
+            <td>用户名</td>
+            <td><input type="text" name="user"> </td>
+        </tr>
+
+        <tr>
+            <td>密码</td>
+            <td><input type="password" name="pwd"></td>
+        </tr>
+
+        <tr>
+            <td>图片</td>
+            <td><input type="file" name="myfile"></td>
+
+        </tr>
+
+        <tr>
+            <td><input type="submit" value="提交"> </td>
+            <td><input type="reset" value="取消"></td>
+        </tr>
+    </table>
+
+
+
+</form>
+</body>
+</html>
